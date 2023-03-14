@@ -17,6 +17,10 @@ public class MultiplyComposite implements Observer,  MathExpression {
     public void add(MultiplyComposite multiplyComposite) {
         numbers.add(new NumberLeaf(multiplyComposite.getResult()));
     }
+    
+    public void add(PlusComposite plusComposite) {
+        numbers.add(new NumberLeaf(plusComposite.getResult()));
+    }
     @Override
     public int getResult() {
         for (int i = 0; i < numbers.size(); i++) {
