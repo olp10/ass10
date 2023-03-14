@@ -5,24 +5,24 @@ import java.util.List;
 
 public class PlusComposite implements MathExpression {
 
-    List<Integer> numbers;
+    List<NumberLeaf> numbers;
     public PlusComposite() {
         this.numbers = new ArrayList<>();
     }
 
     public void add(NumberLeaf numberLeaf) {
-        numbers.add(numberLeaf.getResult());
+        numbers.add(numberLeaf);
     }
 
     public void add(PlusComposite plusComposite) {
-        numbers.add(plusComposite.getResult());
+        numbers.add(new NumberLeaf(plusComposite.getResult()));
     }
     @Override
     public int getResult() {
         for (int i = 0; i < numbers.size(); i++) {
-            int result = numbers.get(i);
+            int result = numbers.get(i).getResult();
             for (int j = i + 1; j < numbers.size(); j++) {
-                result += numbers.get(j);
+                result += numbers.get(j).getResult();
             }
             return result;
         }
