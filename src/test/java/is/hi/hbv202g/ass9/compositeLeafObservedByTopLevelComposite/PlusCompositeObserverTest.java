@@ -2,9 +2,13 @@ package is.hi.hbv202g.ass9.compositeLeafObservedByTopLevelComposite;
 
 import static org.junit.Assert.*;
 
+import is.hi.hbv202g.ass9.compositeLeafObservedByComposite.NumberLeaf;
+import is.hi.hbv202g.ass9.compositeLeafObservedByComposite.PlusComposite;
 import org.junit.Before;
 import org.junit.Test;
 
+
+// TODO í lagi
 public class PlusCompositeObserverTest {
 
 	private PlusComposite plusComposite;

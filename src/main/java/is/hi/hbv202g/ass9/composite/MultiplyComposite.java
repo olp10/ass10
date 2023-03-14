@@ -14,6 +14,10 @@ public class MultiplyComposite implements MathExpression {
         numbers.add(numberLeaf);
     }
 
+    public void add(PlusComposite plusComposite) {
+        numbers.add(new NumberLeaf(plusComposite.getResult()));
+    }
+
     public void add(MultiplyComposite multiplyComposite) {
         numbers.add(new NumberLeaf(multiplyComposite.getResult()));
     }

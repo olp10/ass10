@@ -1,6 +1,10 @@
 package is.hi.hbv202g.ass9.compositeLeafObservedByTopLevelComposite;
 
 import static org.junit.Assert.*;
+
+import is.hi.hbv202g.ass9.compositeLeafObservedByComposite.MultiplyComposite;
+import is.hi.hbv202g.ass9.compositeLeafObservedByComposite.NumberLeaf;
+import is.hi.hbv202g.ass9.compositeLeafObservedByComposite.PlusComposite;
 import org.junit.Test;
 
 public class MixedCompositeObserverTest {

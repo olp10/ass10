@@ -7,6 +7,7 @@ import is.hi.hbv202g.ass9.composite.PlusComposite;
 import org.junit.Before;
 import org.junit.Test;
 
+// TODO í lagi
 public class PlusCompositeTest {
 
 	private PlusComposite plusComposite;

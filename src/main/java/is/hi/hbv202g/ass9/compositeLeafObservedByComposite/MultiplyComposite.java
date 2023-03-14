@@ -5,6 +5,7 @@ import java.util.List;
 
 public class MultiplyComposite implements Observer,  MathExpression {
     private List<NumberLeaf> numbers;
+    private int lastObservedResult;
 
     public MultiplyComposite() {
         this.numbers = new ArrayList<>();
@@ -35,6 +36,10 @@ public class MultiplyComposite implements Observer,  MathExpression {
 
     @Override
     public void update() {
+        lastObservedResult = getResult();
+    }
 
+    public int getLastObservedResult() {
+        return lastObservedResult;
     }
 }
