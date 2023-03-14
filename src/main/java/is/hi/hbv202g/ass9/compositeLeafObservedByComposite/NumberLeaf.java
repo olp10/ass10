@@ -10,11 +10,14 @@ public class NumberLeaf extends Observable implements MathExpression {
         return value;
     }
 
-    public void setValue(Observable observable) {
-        this.value = ((NumberLeaf) observable).getValue();
+    public void setValue(int value) {
+        this.value = value;
+        notifyObservers();
     }
 
     public int getResult() {
         return value;
     }
+
+
 }
