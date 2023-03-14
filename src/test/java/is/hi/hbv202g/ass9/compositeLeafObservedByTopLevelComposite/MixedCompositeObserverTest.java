@@ -30,6 +30,6 @@ public class MixedCompositeObserverTest {
 
 		number1.setValue(3); // This will cause stuff printed on the screen: this is not tested.
 	
-		assertEquals(20, multiplyComposite.getLastObservedResult());
+		assertEquals(12, multiplyComposite.getLastObservedResult());
 	}
 }

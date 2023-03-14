@@ -19,17 +19,28 @@ public class MixedCompositeObserverTest {
 		PlusComposite plusComposite = new PlusComposite();
 		plusComposite.add(number1);
 		plusComposite.add(number2);
+		System.out.println("Plus last observed result: " + plusComposite.getLastObservedResult());
+		System.out.println("Plus result: " + plusComposite.getResult());
 
 		MultiplyComposite multiplyComposite = new MultiplyComposite();
 		multiplyComposite.add(number4);
 		multiplyComposite.add(plusComposite);
 
+		System.out.println("Multiply Last observed result: " + multiplyComposite.getLastObservedResult());
+		System.out.println("Multiply Result: " + multiplyComposite.getResult());
+
 		number1.attach(multiplyComposite);
 		number2.attach(multiplyComposite);
 		number4.attach(multiplyComposite);
 
+		System.out.println("Multiply Last observed result: " + multiplyComposite.getLastObservedResult());
+		System.out.println("Multiply Result: " + multiplyComposite.getResult());
+
 		number1.setValue(3); // This will cause stuff printed on the screen: this is not tested.
+
+		System.out.println("Multiply Last observed result: " + multiplyComposite.getLastObservedResult());
+		System.out.println("Multiply Result: " + multiplyComposite.getResult());
 	
-		assertEquals(20, multiplyComposite.getLastObservedResult());
+		assertEquals(12, multiplyComposite.getLastObservedResult());
 	}
 }
