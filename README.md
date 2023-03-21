@@ -21,5 +21,7 @@ Maven:
 - 
 
 
+[UML Class Diagram](src/site/markdown/uml.md)
+
 [License](https://github.com/olp10/ass10/blob/cabaa66d3c72af6bee2bf0d5b8baace96d348712/LICENSE.md)
 
