@@ -1,6 +1,6 @@
 2023
 
-gHelmut Neukirchen
+Helmut Neukirchen
 
 Ólafur Pálsson
 
