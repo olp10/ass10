@@ -21,7 +21,7 @@ Maven:
 - `mvn execute` runs CompositeMain
 
 
-[UML Class Diagram](src/site/markdown/uml.md)
+[UML Class Diagram](src/site/markdown/documentation.md)
 
 [License](LICENSE.md)
 
