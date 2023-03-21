@@ -1,2 +1,7 @@
 2023
-Helmut Neukirchen
+
+gHelmut Neukirchen
+
+Ólafur Pálsson
+
+María Rós Kaldalóns
