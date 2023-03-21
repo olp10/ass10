@@ -1,5 +1,6 @@
 package is.hi.hbv202g.ass9.compositeLeafObserverTemplateMethod;
-public class NumberLeaf {
+
+public class NumberLeaf extends Observable implements MathExpression {
     private int value;
 
     public NumberLeaf(int value) {
@@ -12,9 +13,12 @@ public class NumberLeaf {
 
     public void setValue(int value) {
         this.value = value;
+        notifyObservers();
     }
 
     public int getResult() {
         return value;
     }
+
+
 }
