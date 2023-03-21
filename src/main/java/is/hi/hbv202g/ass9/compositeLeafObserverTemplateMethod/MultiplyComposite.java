@@ -3,9 +3,8 @@ package is.hi.hbv202g.ass9.compositeLeafObserverTemplateMethod;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MultiplyComposite implements Observer, MathExpression {
+public class MultiplyComposite implements MathExpression {
     private List<NumberLeaf> numbers;
-    private int lastObservedResult;
 
     public MultiplyComposite() {
         this.numbers = new ArrayList<>();
@@ -15,12 +14,12 @@ public class MultiplyComposite implements Observer, MathExpression {
         numbers.add(numberLeaf);
     }
 
-    public void add(MultiplyComposite multiplyComposite) {
-        numbers.add(new NumberLeaf(multiplyComposite.getResult()));
-    }
-    
     public void add(PlusComposite plusComposite) {
         numbers.add(new NumberLeaf(plusComposite.getResult()));
+    }
+
+    public void add(MultiplyComposite multiplyComposite) {
+        numbers.add(new NumberLeaf(multiplyComposite.getResult()));
     }
     @Override
     public int getResult() {
@@ -32,14 +31,5 @@ public class MultiplyComposite implements Observer, MathExpression {
             return result;
         }
         return 0;
-    }
-
-    @Override
-    public void update() {
-        lastObservedResult = getResult();
-    }
-
-    public int getLastObservedResult() {
-        return lastObservedResult;
     }
 }

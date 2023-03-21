@@ -3,11 +3,9 @@ package is.hi.hbv202g.ass9.compositeLeafObserverTemplateMethod;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PlusComposite implements MathExpression, Observer {
+public class PlusComposite implements MathExpression {
 
     List<NumberLeaf> numbers;
-
-    private int lastObservedResult;
     public PlusComposite() {
         this.numbers = new ArrayList<>();
     }
@@ -29,14 +27,5 @@ public class PlusComposite implements MathExpression, Observer {
             return result;
         }
         return 0;
-    }
-
-    @Override
-    public void update() {
-        lastObservedResult = getResult();
-    }
-
-    public int getLastObservedResult() {
-        return lastObservedResult;
     }
 }
