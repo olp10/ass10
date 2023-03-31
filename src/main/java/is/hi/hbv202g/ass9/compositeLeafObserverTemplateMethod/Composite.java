@@ -27,7 +27,6 @@ public abstract class Composite implements Observer {
         numberLeaves.add(new NumberLeaf(composite.getResult()));
     }
 
-
     public List<NumberLeaf> getNumberLeaves() {
         return numberLeaves;
     }
