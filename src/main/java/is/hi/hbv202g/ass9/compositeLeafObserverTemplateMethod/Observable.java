@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Observable {
-    private List<Observer> observers;
+    protected List<Observer> observers;
     public Observable() {
         observers=new ArrayList<Observer>();
     }

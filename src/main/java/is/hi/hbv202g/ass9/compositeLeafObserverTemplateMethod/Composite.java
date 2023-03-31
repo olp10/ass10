@@ -13,7 +13,7 @@ import is.hi.hbv202g.ass9.composite.NumberLeaf;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Composite implements Observer {
+public abstract class Composite implements Observer {
     protected List<NumberLeaf> numberLeaves;
     protected int lastObservedResult;
 
